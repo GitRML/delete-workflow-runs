@@ -9,7 +9,7 @@ The action will calculate the number of days that each workflow run has been ret
 ## What's new?
 * Add the input parameter "[**`keep_minimum_runs`**](#4-keep_minimum_runs)". Whit this input parameter, you can specify the number of the minimum runs to keep for each workflow. The specified number of latest runs will be kept for each workflow, even if some of the runs have reached the specified retention days.
 
-* Disable the endpoint **List workflow runs for a repository** of the GitHub Actions API, and enable new endpoints **List repository workflows** and **List workflow runs**. 
+* Disable the endpoint "**List workflow runs for a repository**" of the GitHub Actions API, and enable new endpoints "**List repository workflows**" and "**List workflow runs**". 
 
 * Optimize code to simplify the processes.
 ##
