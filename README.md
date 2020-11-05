@@ -58,6 +58,7 @@ jobs:
           token: ${{ secrets.AUTH_PAT }}
           repository: ${{ github.repository }}
           retain_days: 30
+          keep_minimum_runs: 6
 ```
 
 ### In manual triggered workflow, see [workflow_dispatch event](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_dispatch).
@@ -72,6 +73,10 @@ on:
         description: 'Number of days.'
         required: true
         default: 90
+      minimum_runs:
+        description: 'The minimum runs to keep for each workflow.'
+        required: true
+        default: 6
 
 jobs:
   del_runs:
@@ -83,6 +88,7 @@ jobs:
           token: ${{ secrets.AUTH_PAT }}
           repository: ${{ github.repository }}
           retain_days: ${{ github.event.inputs.days }}
+          keep_minimum_runs: ${{ github.event.inputs.minimum_runs }}
 ```
 ##
 
