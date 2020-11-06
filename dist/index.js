@@ -99,6 +99,9 @@ async function main() {
 
                 runs_page_number--;
               }
+
+              const del_runs = runs_total_count - remain_runs;
+              console.log(`✅ ${del_runs} runs are deleted for this workflow.`);
             }
             else {
               console.log(`✅ No runs need to be deleted for this workflow.`);
